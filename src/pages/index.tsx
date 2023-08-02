@@ -11,7 +11,7 @@ interface PostsData {
 }
 
 interface Props {
-  allPostsData: PostsData;
+  allPostsData: PostsData[];
 }
 
 export default function Home({ allPostsData }: Props) {

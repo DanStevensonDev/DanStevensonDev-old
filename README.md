@@ -11,4 +11,3 @@ The project uses the following:
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
-File edited on GitHub iPhone app with autocomplete and line wrapping added

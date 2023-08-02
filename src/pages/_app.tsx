@@ -2,14 +2,14 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
 
-import { Sen } from 'next/font/google'
- 
-const font = Sen({ weight: '400', subsets: []})
+import Layout from "~/components/layout";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return (<main className={font.className}>
+  return (
+    <Layout>
       <Component {...pageProps} />
-    </main>)
+    </Layout>
+  );
 };
 
 export default api.withTRPC(MyApp);

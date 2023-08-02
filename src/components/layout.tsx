@@ -1,9 +1,15 @@
 import { Sen } from "next/font/google";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 const font = Sen({ weight: "400", subsets: [] });
 
-export default function Layout({ children }: { children: ReactNode }) {
+interface LayoutProps {
+  children: ReactNode;
+  home?: boolean;
+}
+
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <>
       <div
@@ -31,6 +37,11 @@ export default function Layout({ children }: { children: ReactNode }) {
             Dan Stevenson
           </h1>
           <main className={`${font.className} my-6`}>{children}</main>
+          {!home && (
+            <div className="">
+              <Link href="/">← Back to home</Link>
+            </div>
+          )}
         </div>
       </div>
     </>

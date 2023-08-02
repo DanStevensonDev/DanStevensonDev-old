@@ -48,7 +48,7 @@ export default function Home({ allPostsData }: Props) {
         </div>
       </section>
       <section>
-        <h2 className="text-3xl font-extrabold text-black">Blog</h2>
+        <h2 className="text-3xl font-extrabold text-black">Posts</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
